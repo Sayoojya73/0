@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link href="./media.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Webpage Title</h1>
+    </header>
+    <nav>
+        <ul type="none">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Main Content</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Officia tenetur quis
+            ex earum eos, itaque odit temporibus 
+            consequatur animi dolor ipsam inventore
+             ratione nihilquibusdam blanditiis, dol
+             orem mollitia dolorum. Tempora.</p>
+
+             <div class="row">
+                <div class="col-3">
+                    <h3>Heading</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maiores provident enim odit expedita suscipit placeat in laboriosam temporibus aspernatur ex adipisci facilis quos voluptatem cum quae, laborum sit sapiente!</p>
+                </div>
+                <div class="col-3">
+                    <h3>Heading</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maiores provident enim odit expedita suscipit placeat in laboriosam temporibus aspernatur ex adipisci facilis quos voluptatem cum quae, laborum sit sapiente!</p></div>
+                <div class="col-3">
+                    <h3>Heading</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maiores provident enim odit expedita suscipit placeat in laboriosam temporibus aspernatur ex adipisci facilis quos voluptatem cum quae, laborum sit sapiente!</p>
+                </div>
+                <div class="col-3">
+                    <h3>Heading</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maiores provident enim odit expedita suscipit placeat in laboriosam temporibus aspernatur ex adipisci facilis quos voluptatem cum quae, laborum sit sapiente!</p>
+                </div>
+             </div>
+    </main>
+    <footer>
+        <p>All Rights Reserved @site.com 2023</p>
+    </footer>
+</body>
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+header{
+    background-color: rgba(26, 53, 208, 0.65);
+    color: rgb(28, 17, 128);
+    text-align: center;
+    padding: 10px;
+    
+}
+nav{
+    background-color: rgba(19, 179, 223, 0.627);
+    padding: 20px;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    
+    
+    
+}
+nav ul li{
+    margin: 30px;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(37, 31, 141);
+}
+main{
+    padding: 30px;
+    background-color:rgba(157, 188, 200, 0.654) ;
+}
+main h2{
+    text-align: center;
+    margin: 20px;
+    color: rgb(11, 11, 98);
+}
+main p{
+    text-align: justify;
+}
+main h3{
+    margin: 20px;
+    text-align: center;
+    color: rgb(11, 11, 98);
+}
+.row{
+    display: flex;
+    height: 400px;
+    width: 100%;
+    
+}
+.col-3{
+    margin: 10px;
+    background-color: rgba(144, 188, 173, 0.811);
+    padding: 10px;
+}
+footer{
+    
+   background-color: rgba(11, 11, 98, 0.787);
+   color: rgb(211, 211, 218);
+   height: 100px;
+  
+
+}
+footer p{
+    padding: 40px;
+    text-align: center;
+    
+}
+@media screen  and (max-width:400px){
+    *{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    header{
+        background-color: black;
+        color: beige;
+    }
+    nav{
+        background-color: rgba(182, 193, 196, 0.627);
+        padding: 5px;
+    }
+    nav ul li{
+        margin: 20px;
+        
+    }
+    nav ul li a{
+        color: black;
+    }
+    main{
+        background-color: rgb(252, 250, 248);
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 750px;
+        
+    }
+    footer{
+        
+        bottom: 0px;
+        
+    }
+
+    
+}
+    
+  </style>
+</html>
