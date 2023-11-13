@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: rgb(238, 237, 237);">
+    <center>
+        <div id="maindiv"
+            style=" width:600px;border: solid;  margin:40px; background-color: rgb(255, 255, 255);">
+            <h1>To-Do List</h1>
+            <input id="task" type="text" class="form-control" style="width: 500px;" placeholder="Enter a task...">
+            <input id="btn1" onclick="addTAsk()" type="button" class="form-control"
+                style="width: 500px; margin-top: 20px; margin-bottom: 20px;   background-color: black; color: white;" value="Add task">
+
+            <div id="output" style="background-color: rgb(238, 237, 237); width: 500px; margin: 10px;"></div>
+
+
+        </div>
+    </center>
+
+    <script>
+        function addTAsk() {
+            let task1 = document.getElementById('task').value;
+            
+           
+
+            let savedTask = document.createElement('p');
+            savedTask.innerText = task1;
+            document.getElementById('output').appendChild(savedTask);
+            savedTask.style.flexDirection='row';
+            savedTask.style.margin='1px'
+            
+
+
+            let editTask = document.createElement('button')
+            editTask.innerText = 'Edit';
+            editTask.style.color='white';
+            editTask.style.backgroundColor='black';
+            editTask.style.padding ='5px 20px 5px 20px';
+            editTask.style.margin ='10px';
+            editTask.style.flexDirection ='row'
+
+
+            editTask.addEventListener('click', function () {
+                let updatedTask = prompt('Edit Task : ', savedTask.innerText);
+                if (updatedTask !== null) {
+                    savedTask.innerText = updatedTask;
+                }
+                if (updatedTask.length == 0) {
+                    savedTask.remove();
+                    editTask.remove();
+                    removeTask.remove();
+                }
+
+
+            })
+            
+            document.getElementById('output').appendChild(editTask);
+
+
+            let removeTask = document.createElement('button')
+            removeTask.innerText = 'Remove';
+            removeTask.style.color='white';
+            removeTask.style.backgroundColor='black';
+            removeTask.style.padding ='5px 20px 5px 20px';
+            removeTask.style.margin ='10px'
+            removeTask.style.flexDirection ='row'
+
+            removeTask.addEventListener('click', function () {
+                savedTask.remove();
+                editTask.remove();
+                removeTask.remove();
+            })
+
+            document.getElementById('output').appendChild(removeTask);
+            if(task1.length==0){
+                alert('Enter the task!!!!');
+                savedTask.remove();
+                editTask.remove();
+                removeTask.remove();
+            }
+
+
+
+
+
+        }
+
+
+
+
+
+    </script>
+
+</body>
+<style>
+    
+</style>
+
+</html>
