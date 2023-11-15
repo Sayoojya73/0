@@ -59,7 +59,7 @@ if(findEmp==id1){
    para.innerHTML = '';
    para.innerHTML=`
    <div style="padding-left:15px; border:none; margin:5px; background-color: white; font-size:small; font-family: monospace; padding-bottom:15px; width:400px"> 
-   <h3 style="color:blue; text-align:center; padding-top:15px">EMPLOYEE DETAIS</h3></p>
+   <h3 style="color:blue; text-align:center; padding-top:15px">EMPLOYEE DETAILS</h3></p>
    <p style="paddind:5px;  background-color:  rgb(192, 248, 248); margin:5px; width: 350px; padding: 4px; border-radius: 4px;">Employee id: ${id1}<br></p>
    <p style="paddind:5px;  background-color:  rgb(192, 248, 248); margin:5px; width: 350px; padding: 4px; border-radius: 4px;">Employee Name: ${name1}<br></p>
    <p style="paddind:5px;  background-color:  rgb(192, 248, 248); margin:5px; width: 350px; padding: 4px; border-radius: 4px;">Employee Address: ${address1}<br></p>
